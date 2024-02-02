@@ -13,10 +13,12 @@ class shorten_itemANDchar(construct_item):
 class shorten_dict(construct_item):
     def shorten(self):
         input_dict = self.item_name
+        print(f'Printing dict values directly: {self.item_name}')
+        print(f'Printing dict values using item method: {self.item_name.items()}')
         counter = 0
         result_dict = {}
 
-        for (k, v) in input_dict.items():
+        for k, v in input_dict.items():
             if(counter < 3):
                 result_dict.update({k: v})
                 counter = counter + 1
