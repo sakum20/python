@@ -12,11 +12,11 @@ class shorten_itemANDchar(construct_item):
 
 class shorten_dict(construct_item):
     def shorten(self):
-        dict = self.item_name
+        input_dict = self.item_name
         counter = 0
         result_dict = {}
 
-        for (k, v) in dict.items():
+        for (k, v) in input_dict.items():
             if(counter < 3):
                 result_dict.update({k: v})
                 counter = counter + 1
